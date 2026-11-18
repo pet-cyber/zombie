@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background-color: #070908;
+    background-image: 
+        radial-gradient(circle at 50% 45%, #161c18 0%, #050605 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #d8e0da;
+    font-family: 'Share Tech Mono', monospace;
+    overflow: hidden;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hazard-badge {
+    font-size: 22px;
+    color: #e6c229;
+    text-shadow: 0 0 10px rgba(230, 194, 41, 0.6);
+}
+
+.title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 26px;
+    color: #d93838;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(217, 56, 56, 0.55);
+}
+
+.sector-tag {
+    font-size: 13px;
+    color: #6c7a70;
+    letter-spacing: 1.5px;
+}
+
+.controls-hint {
+    display: flex;
+    gap: 14px;
+    font-size: 12px;
+    color: #8a998e;
+}
+
+.controls-hint span {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 3px 7px;
+    border: 1px solid #262e28;
+    border-radius: 3px;
+}
+
+.canvas-container {
+    position: relative;
+    border: 2px solid #2e3831;
+    box-shadow: 
+        0 0 50px rgba(0, 0, 0, 0.95),
+        0 0 25px rgba(180, 30, 30, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    background-color: #161917;
+    cursor: crosshair;
+}
+
+/* Subtle tactical monitor scanlines */
+.scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.18) 50%
+    );
+    background-size: 100% 4px;
+}
+
+/* Deep atmospheric edge shadow */
+.vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 95px rgba(0, 0, 0, 0.88);
+}
